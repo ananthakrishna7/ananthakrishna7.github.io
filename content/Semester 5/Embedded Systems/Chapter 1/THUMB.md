@@ -1,0 +1,3 @@
+- A 16 bit compressed form of the original 32 bit instruction set
+- Uses Dynamic Decompression Hardware in the instruction pipeline
+- COde Density better than most CISC processors
