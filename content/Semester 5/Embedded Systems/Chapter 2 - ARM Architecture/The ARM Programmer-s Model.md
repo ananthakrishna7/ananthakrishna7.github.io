@@ -5,7 +5,7 @@ A processor's ISA defines the set of instructions that the programmer can use to
 ### User Mode
 - 15 General Purpose 32 bit registers (`r0` through `r14`)
 - Program Counter (`r15`)
-- [[CSPR]]
+- [[CPSR]]
 Remaining registers are usable only in system modes.
 ![[Pasted image 20240624102336.png]]
 

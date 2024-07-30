@@ -1,4 +1,4 @@
-# Current Program Status Register(CSPR)
+# Current Program Status Register(CPSR)
 ![[Pasted image 20240624102727.png]]
 This register records the results of the last comparison operation. These results are used to decide during a branch instruction. It is not directly written by the user program. It is protected from change by the user program.
 
