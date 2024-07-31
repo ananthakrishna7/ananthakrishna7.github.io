@@ -26,4 +26,8 @@ MVN r0, r1; move negated. r0 = NOT r1
 
 ### Comparison
 ```arm-asm
+CMP r0, r1 ; compare. set Z on r1 - r2
+CMN r0, r1 ; compare negated. set Z on r1 + r2 [r1 - (-r2)]
+TST r0, r1 ; bit test. r0 AND r1
+TEQ r0, r1 ; test equal. r0 XOR r1
 ```
