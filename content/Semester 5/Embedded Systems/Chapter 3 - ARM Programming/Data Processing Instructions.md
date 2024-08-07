@@ -48,3 +48,23 @@ TST r0, r1 ; bit test. r0 AND r1
 TEQ r0, r1 ; test equal. r0 XOR r1
 ```
 
+## Immediate Operands
+Immediates are specified with a hash (`#`). 
+**Example:**
+```arm-asm
+ADD r0, r0, #1 ; Decimal
+ADD r0, r1, #0x56 ; Hexadecimal
+```
+
+Immediates must be within the range
+$$(0 \rightarrow 255)\times 2^{2n}; n \epsilon(0, 12)$$
+Reason is explained in Chapter 5.
+
+## Shifted Register Operands
+
+Shifts are a bit weird.
+```arm-asm
+ADD r3, r2, r1, LSl #3 ; r3 := r2 + r1*8
+```
+
+Shifts
