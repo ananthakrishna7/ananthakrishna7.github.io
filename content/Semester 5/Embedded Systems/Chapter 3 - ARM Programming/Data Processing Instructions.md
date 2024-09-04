@@ -66,3 +66,33 @@ Shifts are a bit weird.
 ```arm-asm
 ADD r3, r2, r1, LSl #3 ; r3 := r2 + r1*8
 ```
+
+### Kinds of Shifts
+- LSL
+- LSR
+- ASL - Arithmetic Shift Left, = LSL
+- ASR,  Arithmetic Shift Right -> shift right and fill leftmost bit with 1 or 0 depending on the bit after it. **Preserves sign of a number** 
+- ROR, Rotate right. Fall off bits come on the other side
+- RRX: Textbook says: 
+>RRX: rotate right extended by 1 place; the vacated bit (bit 31) is filled with the old value of the C flag and the operand is shifted one place to the right. With appropriate use of the condition codes, a 33-bit rotate of the operand and the C flag is performed.
+
+
+## Setting Condition Codes
+Make the instruction set condition codes (NCVZ).
+Just add an S to instructions that don't do this by default.
+THIS IS THE BEGINNING OF THE POWER OF CONDITIONAL EXECUTION!
+## Multiplies
+- Immediates not supported
+- Result register
+- V not modified, C meaningless
+Only lower 32 bits of product are placed in the destination register.
+
+```arm-asm
+MUL r0, r1, r2 ; r0 has only lower 32 bits of prod
+MULS r0, r1, r2 ; Sets only N and Z flags if applicable
+MLA r4, r3, r2, r1 ; Multiply accumulate, r4 := r3xr2 + r1
+```
+
+There's a more efficient way to multiply immediates, but my copy is not clear about that. Check later. Irrelevant right now.
+
+

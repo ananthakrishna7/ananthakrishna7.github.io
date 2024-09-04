@@ -1,3 +1,4 @@
+>[!warning] This cheatsheet is incomplete. Check other notes on the topic, or the textbook for a complete version
 ## Data Processing instructions
 ### Arithmetic
 ```arm-asm
@@ -38,6 +39,7 @@ ADD r0, r0, #1 ; Decimal
 ADD r0, r1, #0x56 ; Hexadecimal
 ```
 ## Shifted Register Operands
+>[!warning] Incomplete
 ```arm-asm
 ADD r3, r2, r1, LSl #3 ; r3 := r2 + r1*8
 LSL r1, r1, #3 ; r1 := r1*8
