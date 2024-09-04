@@ -17,9 +17,8 @@ SUB r0, r1, r2 ; r0 = r1 - r2
 SBC r0, r1, r2 ; r0 = r1 - r2 + C - 1
 RSB r0, r1, r2 ; Reverse SUB, r0 = r2 - r1
 RSC r0, r1, r2 ; RSB with carry. r0 = r2 - r1 + C - 1
-```
 
-SUB(S) instructions -> A borrow sets C flag to 0 and it is set to 1 otherwise. (`S` Explained Later)
+```
 
 ### Logical
 Instructions are bitwise. They operate on every bit in the supplied registers.
