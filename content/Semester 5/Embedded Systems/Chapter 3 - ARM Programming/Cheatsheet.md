@@ -1,4 +1,4 @@
->[!warning] This cheatsheet is incomplete. Check other notes on the topic, or the textbook for a complete version
+>[!warning] This cheatsheet is incomplete. Check other notes on the topic, or the textbook for a complete version.
 ## Data Processing instructions
 ### Arithmetic
 ```arm-asm
