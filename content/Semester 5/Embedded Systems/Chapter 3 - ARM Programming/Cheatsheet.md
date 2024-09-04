@@ -26,4 +26,19 @@ MVN r0, r1; move negated. r0 = NOT r1
 
 ### Comparison
 ```arm-asm
+CMP r0, r1 ; compare. set Z on r1 - r2
+CMN r0, r1 ; compare negated. set Z on r1 + r2 [r1 - (-r2)]
+TST r0, r1 ; bit test. r0 AND r1
+TEQ r0, r1 ; test equal. r0 XOR r1
+```
+
+## Immediate Operands
+```arm-asm
+ADD r0, r0, #1 ; Decimal
+ADD r0, r1, #0x56 ; Hexadecimal
+```
+## Shifted Register Operands
+```arm-asm
+ADD r3, r2, r1, LSl #3 ; r3 := r2 + r1*8
+LSL r1, r1, #3 ; r1 := r1*8
 ```

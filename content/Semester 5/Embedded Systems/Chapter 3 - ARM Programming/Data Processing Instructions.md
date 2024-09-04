@@ -66,5 +66,3 @@ Shifts are a bit weird.
 ```arm-asm
 ADD r3, r2, r1, LSl #3 ; r3 := r2 + r1*8
 ```
-
-Shifts
