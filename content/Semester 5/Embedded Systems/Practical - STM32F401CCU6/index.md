@@ -1,1 +1,0 @@
-This folder has basic code for working with the STM32F401CCU6 board that we use in the lab.
