@@ -65,6 +65,7 @@ Reason is explained in Chapter 5.
 Shifts are a bit weird.
 ```arm-asm
 ADD r3, r2, r1, LSl #3 ; r3 := r2 + r1*8
+LSL r1, r1, #3 ; r1 := r1*8
 ```
 
 ### Kinds of Shifts
