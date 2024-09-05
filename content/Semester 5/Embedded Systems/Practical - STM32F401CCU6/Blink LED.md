@@ -15,7 +15,7 @@ int main(void) // "void" is important; program won't compile without it
 		GPIOC->ODR |= (1U << 13); // writing logic HIGH to the LED pin
 		for(int i = 0; i < 500000; i++); // delay
 		GPIOC->ODR &= ~(1U << 13); // writing logic LOW to the LED pin
-		for(int)
+		for(int i = 0; i < 500000; i++); // delay. don't skip this
 	}
 }
 ```
