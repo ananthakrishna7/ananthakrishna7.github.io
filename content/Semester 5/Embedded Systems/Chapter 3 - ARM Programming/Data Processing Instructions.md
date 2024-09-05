@@ -79,9 +79,13 @@ LSL r1, r1, #3 ; r1 := r1*8
 
 
 ## Setting Condition Codes
-Make the instruction set condition codes (NCVZ).
-Just add an S to instructions that don't do this by default.
+- Make the instruction set condition codes (NCVZ).
+- Just add an S to instructions that don't do this by default.
 THIS IS THE BEGINNING OF THE POWER OF CONDITIONAL EXECUTION!
+Example:
+```arm-asm
+ADDS r1, r0, r0 ; set the flags after adding
+```
 ## Multiplies
 - Immediates not supported
 - Result register
