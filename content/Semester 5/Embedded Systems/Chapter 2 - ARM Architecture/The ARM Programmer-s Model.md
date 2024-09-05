@@ -4,6 +4,8 @@ A processor's ISA defines the set of instructions that the programmer can use to
 ## Registers
 ### User Mode
 - 15 General Purpose 32 bit registers (`r0` through `r14`)
+- `r13` is used to hold the address of the stack top.
+- `r14` is the link register.
 - Program Counter (`r15`)
 - [[CPSR]]
 Remaining registers are usable only in system modes.
