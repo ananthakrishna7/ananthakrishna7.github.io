@@ -10,10 +10,10 @@ int main(void)
 	GPIOC->MODER |= (1U << 26); // Set Pin 13 to output mode 01
 	// port A
 	RCC->AHB1ENR |= (1U << 0); // without loss of generality; A is at bit 0
-	// 00 is input. Assuming bits are set to 0 at startup, we don't modify anything. This assumption was implicit for the previous code.
+	// 00 is input. Assuming bits are set to 0 at startup, we don't modify anything. This assumption(that memory is zeroed out at startup) was implicit for the blink code.
 	// GPIOA->MODER |= (0U << 12);
 	// GPIOA->MODER |= (0U << 13);
-	GPIOA->PUPDR |= (1U << 12); // set pull up; CHECK THIS, JUST IN CASE I'M WRONG
+	GPIOA->PUPDR |= (1U << 12); // set pull up;
 	// main loop
 	while(1)
 	{
