@@ -15,4 +15,6 @@ And thus **Distributed System** came into being.
 ## Characteristic 1: Collection of autonomous computing elements
 - Cannot always assume that there's something like a **global clock**
 - Managing **Group membership** is difficult. Eg. Admission control:
-	- 
+	- Open group - anyone can join
+	- Closed group - only members of group have access; separate mechanism for new member join
+	- We need authentication(difficult to scale if designed improperly), identity verification, confidentiality(can create trust issues if anyone can communicate with anyone) 
