@@ -1,0 +1,3 @@
+- Google files are large (GBs)
+- Updates Mostly append to file, rather than overwrite
+- 
