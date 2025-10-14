@@ -1,1 +1,0 @@
-Chapter 2 gives a brief overview of the ARM Architecture.

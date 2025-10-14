@@ -1,1 +1,0 @@
-Chapter 1 covers the basics of Computer Organisation and Architecture.  

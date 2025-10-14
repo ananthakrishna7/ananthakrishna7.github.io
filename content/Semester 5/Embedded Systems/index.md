@@ -1,1 +1,0 @@
-These are my notes for the Embedded Systems course that I'm currently attending. Most screenshots are from the prescribed textbook ==ARM System On Chip Architecture, Steve Furber.==
