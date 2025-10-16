@@ -1,6 +1,7 @@
 ---
 title: Home
 description: Ananthakrishnan Balajee's personal website
+comments: false
 ---
 
 # A Digital Garden of Sorts

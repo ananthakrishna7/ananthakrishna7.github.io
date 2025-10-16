@@ -1,6 +1,7 @@
 ---
 title: Projects
 description: Homepage for Projects
+comments: false
 ---
 # Projects
 
