@@ -28,4 +28,4 @@ I'll update whatever I've tried here. [This](https://github.com/ananthakrishna7/
 
 ## If you want to help
 
-Get in touch with me via email (it's here -> [[../index.md]])! (I haven't figured out how to enable comments on Quartz yet XD)
+Get in touch with me via email (it's here -> [[../index.md]]) or drop a comment below!
