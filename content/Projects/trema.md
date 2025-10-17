@@ -21,10 +21,32 @@ I want to "update" Trema just enough so that it works. It seems like a great too
 
 I'll update whatever I've tried here. [This](https://github.com/ananthakrishna7/trema) is my fork.
 
-```info
-2025-10-15: Added copilot instructions
+#### 2025-10-15
+Added copilot instructions, because, apparently that's the "modern" way now.
+#### 2025-10-17
+I have no idea what I'm doing, and I've lost track of what versions of the dependencies I have installed. I tried adding some dependencies to the  `Gemfile` from the errors I got from running the bundler.
+I tried running the "updated" trema (I haven't figured out the build system yet) on the hello_trema repo, and still got some weird errors.
+
+```sh
+$~: ../trema/bin/trema ./lib/hello_trema.rb -c trema.conf 
+/home/ananth/.rbenv/versions/3.4.6/lib/ruby/gems/3.4.0/gems/bundler-1.13.2/lib/bundler/shared_helpers.rb:161:in 'Bundler::SharedHelpers#search_up': undefined method 'untaint' for an instance of String (NoMethodError)
+
+      current  = File.expand_path(SharedHelpers.pwd).untaint
+                                                    ^^^^^^^^
+	from /home/ananth/.rbenv/versions/3.4.6/lib/ruby/gems/3.4.0/gems/bundler-1.13.2/lib/bundler/shared_helpers.rb:148:in 'Bundler::SharedHelpers#find_file'
+	from /home/ananth/.rbenv/versions/3.4.6/lib/ruby/gems/3.4.0/gems/bundler-1.13.2/lib/bundler/shared_helpers.rb:144:in 'Bundler::SharedHelpers#find_gemfile'
+	from /home/ananth/.rbenv/versions/3.4.6/lib/ruby/gems/3.4.0/gems/bundler-1.13.2/lib/bundler/shared_helpers.rb:49:in 'Bundler::SharedHelpers#in_bundle?'
+	from /home/ananth/.rbenv/versions/3.4.6/lib/ruby/gems/3.4.0/gems/bundler-1.13.2/lib/bundler/setup.rb:5:in '<top (required)>'
+	from <internal:/home/ananth/.rbenv/versions/3.4.6/lib/ruby/3.4.0/rubygems/core_ext/kernel_require.rb>:136:in 'Kernel#require'
+	from <internal:/home/ananth/.rbenv/versions/3.4.6/lib/ruby/3.4.0/rubygems/core_ext/kernel_require.rb>:136:in 'Kernel#require'
+	from ../trema/bin/trema:7:in '<main>'
+
 ```
-<!-- Add some code to make commits come here? -->
+
+I think I need to learn a bit more about Ruby before proceeding. I found [this](https://github.com/jpagex/openflow-protocol) 10 year old repo that just says "An OpenFlow Parser/Serializer in Ruby".
+
+Am I missing something? Is everyone ditching Ruby controllers for OpenFlow? And why?
+
 
 ## If you want to help
 
