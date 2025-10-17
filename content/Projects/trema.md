@@ -45,7 +45,7 @@ $~: ../trema/bin/trema ./lib/hello_trema.rb -c trema.conf
 
 I think I need to learn a bit more about Ruby before proceeding. I found [this](https://github.com/jpagex/openflow-protocol) 10 year old repo that just says "An OpenFlow Parser/Serializer in Ruby".
 
-Am I missing something? Is everyone ditching Ruby controllers for OpenFlow? And why?
+Am I missing something? Is everyone ditching Ruby controllers? And why?
 
 
 ## If you want to help
