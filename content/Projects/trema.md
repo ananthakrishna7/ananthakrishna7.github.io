@@ -47,7 +47,9 @@ I think I need to learn a bit more about Ruby before proceeding. I found [this](
 
 Am I missing something? Is everyone ditching Ruby controllers? And why?
 
-
+#### 2025-10-20
+Yep, I'm taking a break. There's still a lot about Ruby that I don't know, and I'm not able to manage time effectively between learning something new, refreshing old knowledge, and studying for my exams. SO, I'll be back by the end of the month (which is when my exams end).
+Still, get in touch if you have any ideas!
 ## If you want to help
 
-Get in touch with me via email (it's here -> [[../index.md]]) or drop a comment below!
+Get in touch with me via email (it's here -> [[index]]) or drop a comment below!
