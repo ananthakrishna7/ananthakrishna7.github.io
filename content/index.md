@@ -6,6 +6,10 @@ comments: false
 
 # A Digital Garden of Sorts
 
+> [!BUG] Website Under construction
+> Hey there! I'm "renovating" my site now, so some things will seem off. 
+> You can still contact me via my channels below.
+
 Hello there! Welcome to my digital space.
 
 I'm a Computer Science and Engineering student at Amrita Vishwa Vidyapeetham with a passion for building robust applications and diving deep into the worlds of Artificial Intelligence, Computer Networks and Full Stack Development. I enjoy leveraging technology to solve complex problems and am always eager to learn something new. You can view my public repos on my [GitHub profile](https://github.com/ananthakrishna7)
