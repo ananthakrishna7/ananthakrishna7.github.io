@@ -5,6 +5,9 @@ on:
     branches:
       - v5
 
+env:
+  THEME_NAME: catppuccin
+
 permissions:
   contents: read
   pages: write
@@ -48,6 +51,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: public
+      - name: Fetch Quartz Theme
+        run: curl -s -S https://raw.githubusercontent.com/saberzero1/quartz-themes/master/action.sh | bash -s -- $THEME_NAME
 
   deploy:
     needs: build
