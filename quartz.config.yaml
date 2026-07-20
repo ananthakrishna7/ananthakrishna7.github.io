@@ -246,7 +246,7 @@ plugins:
     options:
       includeAll: false
       includedProperties:
-        - description
+        # - description
         - tags
         - aliases
       excludedProperties: []
