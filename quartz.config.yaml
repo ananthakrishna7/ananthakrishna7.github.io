@@ -251,7 +251,6 @@ plugins:
     options:
       includeAll: false
       includedProperties:
-        # - description
         - tags
         - aliases
       excludedProperties: []
@@ -276,6 +275,10 @@ plugins:
       enableInteraction: true
       darkMode: auto
       exportPadding: 20
+    order: 50
+  - source: github:quartz-community/tui
+    enabled: true
+    options: {}
     order: 50
   - source: github:quartz-community/tui
     enabled: true
