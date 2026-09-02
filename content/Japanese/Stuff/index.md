@@ -1,1 +1,0 @@
-I learn from Manga, Anime, Music. I link the Kanji to separate notes
