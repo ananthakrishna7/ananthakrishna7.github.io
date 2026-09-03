@@ -1,6 +1,7 @@
 ---
 title: Netflix Clone
 description: Trying to understand Netflix
+date: 2025-10-20
 ---
 # A Netflix Clone in Go
 

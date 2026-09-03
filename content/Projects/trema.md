@@ -1,6 +1,7 @@
 ---
 title: Trema
 description: My attempt to get Trema working
+date: 2025-10-15
 ---
 
 # Trema
