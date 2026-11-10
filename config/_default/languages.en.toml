@@ -1,0 +1,32 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "Ananthakrishnan Balajee"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+logo = "no"
+description = "Ananthakrishnan Balajee's portfolio website."
+
+[[params.author.links]]
+email = "ananthakrishnanbalajee@gmail.com"
+
+[[params.author.links]]
+github = "github.com/ananthakrishna7"
+
+[[params.author.links]]
+instagram = "https://www.instagram.com/ananthakrishnanbalajee"
+
+[[params.author.links]]
+linkedin = "https://in.linkedin.com/in/ananthakrishnan-balajee"
+
+["params.author"]
+name = "Ananthakrishnan Balajee"
+email = "ananthakrishnanbalajee@gmail.com"
+image = "profile.png"
+headline = "Computer Science Graduate exploring new technologies"
+bio = "This is my bio."
