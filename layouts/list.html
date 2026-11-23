@@ -1,0 +1,7 @@
+{{ define "main" }}
+  {{ partial "page-hero.html" . }}
+  <section class="wrap band">
+    {{ .Content }}
+    {{ range .Pages }}<article class="registry-row"><h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>{{ with .Description }}<p>{{ . }}</p>{{ end }}</article>{{ end }}
+  </section>
+{{ end }}

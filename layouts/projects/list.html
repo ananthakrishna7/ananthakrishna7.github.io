@@ -1,0 +1,24 @@
+{{ define "main" }}
+  {{ partial "page-hero.html" . }}
+  {{ $projects := hugo.Data.projects }}
+  {{ $languages := slice }}
+  {{ range $projects }}{{ with .language }}{{ $languages = $languages | append . }}{{ end }}{{ end }}
+  <section class="wrap band" data-filter aria-label='{{ i18n "publicRepos" }}'>
+    <div class="toolbar" data-controls hidden>
+      <label>{{ i18n "searchRepos" }}<input type="search" data-search placeholder='{{ i18n "repoPlaceholder" }}'></label>
+      <label>{{ i18n "language" }}<select data-category><option value="">{{ i18n "allLanguages" }}</option>{{ range sort (uniq $languages) }}<option>{{ . }}</option>{{ end }}</select></label>
+    </div>
+    <p class="meta" data-count aria-live="polite">{{ len $projects }} {{ i18n "repos" }}</p>
+    {{ with i18n "repoLanguage" }}<p class="meta">{{ . }}</p>{{ end }}
+    <div class="registry">
+      {{ range $projects }}
+        <article class="registry-row" data-item data-category="{{ .language }}">
+          <div><h2><a href="{{ .url }}">{{ .name }}</a></h2>{{ with .description }}<p lang="en">{{ . }}</p>{{ end }}</div>
+          <div class="repo-meta">{{ with .language }}<span class="tag">{{ . }}</span>{{ end }}{{ if .archived }}<span class="tag muted">{{ i18n "archived" }}</span>{{ end }}<span class="meta">{{ .stars }} {{ i18n "stars" }} · {{ .forks }} {{ i18n "forks" }}</span></div>
+        </article>
+      {{ end }}
+    </div>
+    <p data-empty hidden>{{ i18n "noRepos" }}</p>
+    <p><a href="{{ site.Params.github }}?tab=repositories">{{ i18n "viewGitHub" }}</a></p>
+  </section>
+{{ end }}

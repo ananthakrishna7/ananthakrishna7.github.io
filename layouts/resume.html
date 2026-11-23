@@ -1,0 +1,17 @@
+{{ define "main" }}
+  {{ partial "page-hero.html" . }}
+  <div class="wrap article-grid band">
+    <aside class="profile-card">
+      {{ with resources.Get "profile.png" }}
+        {{ $portrait := .Fill "448x448 Center webp q82" }}
+        <img src="{{ $portrait.RelPermalink }}" width="{{ $portrait.Width }}" height="{{ $portrait.Height }}" alt="{{ i18n "portrait" }} {{ site.Title }}">
+      {{ end }}
+      <p class="eyebrow">Ananthakrishnan Balajee</p>
+      <a href="mailto:{{ site.Params.email }}">{{ i18n "email" }}</a>
+      <a href="{{ site.Params.linkedin }}">LinkedIn</a>
+      <a href="{{ site.Params.github }}">GitHub</a>
+      <button type="button" class="button" data-print hidden>{{ i18n "print" }}</button>
+    </aside>
+    <article class="prose">{{ .Content }}</article>
+  </div>
+{{ end }}

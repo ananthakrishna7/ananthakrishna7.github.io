@@ -1,0 +1,12 @@
+{{ define "main" }}
+  {{ partial "page-hero.html" . }}
+  <section class="wrap band creative-grid" aria-label='{{ i18n "interests" }}'>
+    <article class="panel creative-feature">
+      <canvas data-field="mesh" width="760" height="430" aria-hidden="true"></canvas>
+      <div><p class="eyebrow">{{ i18n "workspace" }} <span class="japanese" lang="ja">造形</span></p><h2>{{ i18n "blenderDrawing" }}</h2><p>{{ i18n "visualExperiments" }}</p></div>
+    </article>
+    <article class="panel"><p class="eyebrow">{{ i18n "paperInk" }} <span class="japanese" lang="ja">折り紙・書道</span></p><h2>{{ i18n "origami" }}</h2><p>{{ i18n "folding" }}</p></article>
+    <article class="panel"><p class="eyebrow">{{ i18n "sound" }} <span class="japanese" lang="ja">音楽</span></p><h2>{{ i18n "euphonium" }}</h2><p>{{ i18n "makingMusic" }}</p></article>
+    <article class="panel"><p class="eyebrow">{{ i18n "watchRead" }} <span class="japanese" lang="ja">アニメ・漫画</span></p><h2>{{ i18n "anime" }}</h2><p>{{ i18n "animeDesc" }}</p></article>
+  </section>
+{{ end }}

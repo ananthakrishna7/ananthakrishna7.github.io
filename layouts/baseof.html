@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Description | default site.Params.description }}">
+  {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">{{ end }}
+  <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Title }}" href="{{ .RelPermalink }}">{{ end }}
+  {{ $css := resources.Get "carbon/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ $js := resources.Get "carbon/site.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">{{ i18n "skip" }}</a>
+  <header class="shell">
+    <div class="wrap shell-inner">
+      <a class="brand" href="{{ site.Home.RelPermalink }}"><span class="monogram" aria-hidden="true">AB</span> {{ site.Title }}</a>
+      <nav aria-label='{{ i18n "nav" }}'>
+        {{ range site.Menus.main }}
+          {{ $active := or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) (and .Page (eq $.Section .Page.Section) (ne $.Section "")) }}
+          <a href="{{ .URL }}"{{ if $active }} aria-current="{{ if $.IsMenuCurrent .Menu . }}page{{ else }}true{{ end }}"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+      <div class="shell-utilities">
+        {{ $current := . }}
+        {{ range hugo.Sites }}
+          {{ if ne .Language.Name $current.Language.Name }}
+            {{ $destination := .Home }}
+            {{ $locale := .Language.Locale }}
+            {{ range $current.Translations }}{{ if eq .Language.Locale $locale }}{{ $destination = . }}{{ end }}{{ end }}
+            <a class="language-switch" href="{{ $destination.RelPermalink }}" lang="{{ $locale }}" hreflang="{{ $locale }}">{{ if eq $locale "ja" }}日本語{{ else }}English{{ end }}</a>
+          {{ end }}
+        {{ end }}
+        <a class="shell-contact" href="mailto:{{ site.Params.email }}">{{ i18n "contact" }}</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">{{ block "main" . }}{{ end }}</main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a><p>{{ i18n "footer" }}</p></div>
+      <nav aria-label='{{ i18n "elsewhere" }}'>
+        <a href="{{ site.Params.github }}">GitHub</a>
+        <a href="{{ site.Params.linkedin }}">LinkedIn</a>
+        <a href="{{ site.Params.instagram }}">Instagram</a>
+        <a href="mailto:{{ site.Params.email }}">{{ i18n "email" }}</a>
+        {{ with site.Params.donations }}<a href="{{ . }}">{{ i18n "donate" }}</a>{{ end }}
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

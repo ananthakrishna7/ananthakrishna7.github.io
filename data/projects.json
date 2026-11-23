@@ -1,0 +1,371 @@
+[
+  {
+    "name": "ragnarok",
+    "url": "https://github.com/ananthakrishna7/ragnarok",
+    "description": "A simple 2D game in Java to show off our knowledge of the Object Oriented Paradigm.",
+    "language": "Java",
+    "stars": 1,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "placements-knowledgebase",
+    "url": "https://github.com/ananthakrishna7/placements-knowledgebase",
+    "description": "A Placements knowledgebase that runs on Flask and MariaDB.",
+    "language": "JavaScript",
+    "stars": 1,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "finances-mern",
+    "url": "https://github.com/ananthakrishna7/finances-mern",
+    "description": "A MERN stack 'speedrun' which I'm also planning on using to track my expenses.",
+    "language": "JavaScript",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "digital-garden",
+    "url": "https://github.com/ananthakrishna7/digital-garden",
+    "description": "My personal website where I publish my class notes, and write about hobbies and other interesting things.",
+    "language": "TypeScript",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "toxic-productivity",
+    "url": "https://github.com/ananthakrishna7/toxic-productivity",
+    "description": "A telegram bot written in python that tracks your productivity via commands and gives you toxic comparisons.",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "ananthakrishna7",
+    "url": "https://github.com/ananthakrishna7/ananthakrishna7",
+    "description": "Config files for my GitHub profile.",
+    "language": null,
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "dsa-core",
+    "url": "https://github.com/ananthakrishna7/dsa-core",
+    "description": "Hopefully, fast-to-code and efficient implementations of core algorithms for solving problems.",
+    "language": null,
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "minecraft-c",
+    "url": "https://github.com/ananthakrishna7/minecraft-c",
+    "description": null,
+    "language": "C",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "swara-tokenizer",
+    "url": "https://github.com/ananthakrishna7/swara-tokenizer",
+    "description": "A model to recognize swaras in existing carnatic music audio datasets and tokenize them in a REMI-like encoding.",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "use-TeXLive",
+    "url": "https://github.com/ananthakrishna7/use-TeXLive",
+    "description": "A utility project to render my .tex files. \"Vibe coded\" with ChatGPT.",
+    "language": "TeX",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "opengl_tutorial",
+    "url": "https://github.com/ananthakrishna7/opengl_tutorial",
+    "description": "A project to learn OpenGL",
+    "language": "C",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "nn",
+    "url": "https://github.com/ananthakrishna7/nn",
+    "description": "I'm following Andrej Karpathy's \"Neural Networks: Zero to Hero\" video series on YouTube. This is[will be :p] the result.",
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "minecraft-clone",
+    "url": "https://github.com/ananthakrishna7/minecraft-clone",
+    "description": null,
+    "language": "Java",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "hydrogen-compiler",
+    "url": "https://github.com/ananthakrishna7/hydrogen-compiler",
+    "description": "A compiler built from scratch targeting x86 machines.",
+    "language": "C",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "DSA-in-C",
+    "url": "https://github.com/ananthakrishna7/DSA-in-C",
+    "description": "My implementations of standard data structures in C.",
+    "language": "C",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "cpp-dbms",
+    "url": "https://github.com/ananthakrishna7/cpp-dbms",
+    "description": "An implementation of a Database Management System using C++.",
+    "language": "C++",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "cheapBlender",
+    "url": "https://github.com/ananthakrishna7/cheapBlender",
+    "description": "A basic 3D modelling program in C++.",
+    "language": "C",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "carbon-template-react",
+    "url": "https://github.com/ananthakrishna7/carbon-template-react",
+    "description": "A template for IBM's Carbon Design System using React.",
+    "language": null,
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "19CSE401-compiler-design-coursework",
+    "url": "https://github.com/ananthakrishna7/19CSE401-compiler-design-coursework",
+    "description": "This is where I push my code for my compiler design assignments.",
+    "language": "Java",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "rails_first",
+    "url": "https://github.com/ananthakrishna7/rails_first",
+    "description": "Building my first app with Ruby on Rails",
+    "language": "Ruby",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "yamr",
+    "url": "https://github.com/ananthakrishna7/yamr",
+    "description": "Yet Another Manga Reader.",
+    "language": "Dart",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "midi-playground",
+    "url": "https://github.com/ananthakrishna7/midi-playground",
+    "description": "A repository where I experiment with MIDI",
+    "language": null,
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "Blender_Scripts",
+    "url": "https://github.com/ananthakrishna7/Blender_Scripts",
+    "description": "My personal scripts to use for repetitive tasks I encounter in Blender",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "gui_in_assembly",
+    "url": "https://github.com/ananthakrishna7/gui_in_assembly",
+    "description": "A project to learn x86_64 assembly.",
+    "language": "Assembly",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "netflix-sim",
+    "url": "https://github.com/ananthakrishna7/netflix-sim",
+    "description": "Simulating Netflix's CDN to learn about Distributed Systems",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "opengl_wrapper",
+    "url": "https://github.com/ananthakrishna7/opengl_wrapper",
+    "description": "Something I used to finish a case study for my Computer Graphics course. It's easy to use, but has absolutely no optimizations.",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "19CSE433-Computer-Graphics-and-Visualization-course_files",
+    "url": "https://github.com/ananthakrishna7/19CSE433-Computer-Graphics-and-Visualization-course_files",
+    "description": "A repository for my coursework(we use OpenGL).",
+    "language": "C",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "tcp-in-c",
+    "url": "https://github.com/ananthakrishna7/tcp-in-c",
+    "description": "An implementation of TCP from scratch in C.",
+    "language": "C",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "dl-raga-classifier",
+    "url": "https://github.com/ananthakrishna7/dl-raga-classifier",
+    "description": "A Deep Learning approach to classify ragas.",
+    "language": "Jupyter Notebook",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "nextjs-dashboard",
+    "url": "https://github.com/ananthakrishna7/nextjs-dashboard",
+    "description": "A nextjs tutorial.",
+    "language": "TypeScript",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "kilo-textEditor-in-c",
+    "url": "https://github.com/ananthakrishna7/kilo-textEditor-in-c",
+    "description": null,
+    "language": "C",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "dwave-qc-projects",
+    "url": "https://github.com/ananthakrishna7/dwave-qc-projects",
+    "description": "A repository of the projects I created to explore DWave's Quantum Annealing Processors.",
+    "language": null,
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "pico_w_acsl_verification",
+    "url": "https://github.com/ananthakrishna7/pico_w_acsl_verification",
+    "description": "A simple project to demonstrate verification of C code written for the Rapberry Pi Pico W.",
+    "language": "CMake",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "react-js-tutorial",
+    "url": "https://github.com/ananthakrishna7/react-js-tutorial",
+    "description": "A project to learn React.js, following a tutorial.",
+    "language": "TypeScript",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "student-planner-uid-project",
+    "url": "https://github.com/ananthakrishna7/student-planner-uid-project",
+    "description": "A website created in partial fulfilment of our course in UI Design.",
+    "language": "HTML",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "flask-tutorial",
+    "url": "https://github.com/ananthakrishna7/flask-tutorial",
+    "description": "A blogging website called flaskr, created using the tutorial on the official flask website. This is a project I created to learn flask.",
+    "language": "Python",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "github-slideshow",
+    "url": "https://github.com/ananthakrishna7/github-slideshow",
+    "description": "A robot powered training repository :robot:",
+    "language": "HTML",
+    "stars": 0,
+    "forks": 0,
+    "archived": false
+  },
+  {
+    "name": "smartCityManagement",
+    "url": "https://github.com/ananthakrishna7/smartCityManagement",
+    "description": "A project to learn Scrum",
+    "language": "JavaScript",
+    "stars": 0,
+    "forks": 0,
+    "archived": true
+  },
+  {
+    "name": "CoffeeChat",
+    "url": "https://github.com/ananthakrishna7/CoffeeChat",
+    "description": "A Chat Application in Java to learn multithreading",
+    "language": "Java",
+    "stars": 0,
+    "forks": 0,
+    "archived": true
+  },
+  {
+    "name": "uid-project-student-planner",
+    "url": "https://github.com/ananthakrishna7/uid-project-student-planner",
+    "description": "A course project for my course in User Interface Design.",
+    "language": "HTML",
+    "stars": 0,
+    "forks": 2,
+    "archived": true
+  },
+  {
+    "name": "neoj4-embedding-export",
+    "url": "https://github.com/ananthakrishna7/neoj4-embedding-export",
+    "description": null,
+    "language": null,
+    "stars": 0,
+    "forks": 0,
+    "archived": true
+  }
+]

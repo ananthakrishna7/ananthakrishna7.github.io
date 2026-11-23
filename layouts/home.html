@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{ $blog := site.GetPage "/blog" }}
+{{ $projects := site.GetPage "/projects" }}
+{{ $resume := site.GetPage "/resume" }}
+{{ $creative := site.GetPage "/creative" }}
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">{{ i18n "developer" }} <span>/</span> {{ i18n "learner" }} <span>/</span> {{ i18n "artist" }}</p>
+      <h1>Ananthakrishnan<br><em>Balajee</em></h1>
+      <p class="dek">{{ .Description }}</p>
+      <div class="actions"><a class="button primary" href="{{ $projects.RelPermalink }}">{{ i18n "exploreProjects" }}</a><a class="button" href="{{ $resume.RelPermalink }}">{{ i18n "viewResume" }}</a></div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="visual-caption"><span class="signal"></span> SYSTEM_INIT <span class="japanese" lang="ja">創作と開発</span></div>
+      <canvas data-field="orb" width="800" height="650"></canvas>
+      <div class="visual-foot"><span>+</span><span>+</span></div>
+    </div>
+  </div>
+</section>
+<section class="wrap band" aria-labelledby="command-title">
+  <div class="section-heading">
+    <div><p class="eyebrow">{{ i18n "workAndWriting" }}<span class="japanese" lang="ja">活動</span></p><h2 id="command-title">{{ i18n "commandCenter" }}</h2></div>
+  </div>
+  <div class="dashboard">
+    <section class="panel">
+      <p class="eyebrow">{{ i18n "githubPulse" }}</p>
+      {{ range first 3 hugo.Data.projects }}<a class="repo-preview" href="{{ .url }}"><strong>{{ .name }}</strong>{{ with .language }}<span class="meta">{{ . }}</span>{{ end }}</a>{{ end }}
+      <a class="panel-action" href="{{ $projects.RelPermalink }}">{{ i18n "allProjects" }}</a>
+    </section>
+    <section class="panel">
+      <p class="eyebrow">{{ i18n "technicalLog" }}</p>
+      {{ with index $blog.RegularPages 0 }}
+        <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+        <p>{{ .Description | default (.Summary | plainify | truncate 100) }}</p>
+      {{ else }}
+        <h3>{{ i18n "notesFromBuilding" }}</h3><p>{{ i18n "firstPost" }}</p>
+      {{ end }}
+      <a class="panel-action" href="{{ $blog.RelPermalink }}">{{ i18n "visitBlog" }}</a>
+    </section>
+    <section class="panel panel-terminal">
+      <p class="eyebrow">{{ i18n "creative" }}</p>
+      <h3>{{ i18n "beyondKeyboard" }}</h3>
+      <p class="terminal-line">{{ i18n "hobbies" }}</p>
+      <a class="panel-action" href="{{ $creative.RelPermalink }}">{{ i18n "exploreCreative" }}</a>
+    </section>
+    {{ with hugo.Data.thoughts }}
+      <section class="panel" data-thoughts>
+        <p class="eyebrow">{{ i18n "thoughts" }}</p>
+        {{ range $index, $thought := . }}<blockquote{{ if $index }} hidden{{ end }}>{{ $thought }}</blockquote>{{ end }}
+        {{ if gt (len .) 1 }}<button type="button" class="panel-action" hidden>{{ i18n "anotherThought" }}</button>{{ end }}
+      </section>
+    {{ end }}
+    {{ if and site.Params.spotify site.Params.spotifyLabel }}
+      <section class="panel"><p class="eyebrow">{{ i18n "onSpotify" }}</p><h3>{{ site.Params.spotifyLabel }}</h3><a class="panel-action" href="{{ site.Params.spotify }}">{{ i18n "listenSpotify" }}</a></section>
+    {{ end }}
+  </div>
+</section>
+<section class="contact-band">
+  <div class="wrap contact-inner">
+    <div><p class="eyebrow">{{ i18n "contact" }} <span class="japanese" lang="ja">連絡</span></p><h2>{{ i18n "collaboration" }}</h2></div>
+    <div class="actions"><a class="button primary" href="mailto:{{ site.Params.email }}">{{ i18n "sendEmail" }}</a><a class="button" href="{{ site.Params.linkedin }}">{{ i18n "visitLinkedIn" }}</a></div>
+  </div>
+</section>
+{{ end }}

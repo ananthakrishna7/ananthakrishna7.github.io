@@ -1,0 +1,10 @@
+<header class="page-hero">
+  <div class="wrap page-hero-inner">
+    {{ with .Params.label }}<p class="eyebrow">{{ . }}{{ with $.Params.japanese }} <span class="japanese" lang="ja">{{ . }}</span>{{ end }}</p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="dek">{{ . }}</p>{{ end }}
+    {{ if eq .Section "blog" }}{{ if .IsPage }}
+      <p class="meta">{{ with .Date }}{{ if not .IsZero }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format "02 Jan 2006" }}</time><span aria-hidden="true"> / </span>{{ end }}{{ end }}{{ .ReadingTime }} {{ i18n "readTime" }}</p>
+    {{ end }}{{ end }}
+  </div>
+</header>

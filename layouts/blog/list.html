@@ -1,0 +1,35 @@
+{{ define "main" }}
+  {{ partial "page-hero.html" . }}
+  <section class="wrap band" aria-label='{{ i18n "blogIndex" }}' data-blog data-filter>
+    <div class="toolbar blog-toolbar" data-controls hidden>
+      <label>{{ i18n "searchPosts" }}<input type="search" data-search placeholder='{{ i18n "postPlaceholder" }}'></label>
+      <label>{{ i18n "topic" }}<select data-category><option value="">{{ i18n "allTopics" }}</option>{{ range site.Taxonomies.tags.Alphabetical }}<option>{{ .Page.LinkTitle }}</option>{{ end }}</select></label>
+      <div class="view-switch" role="group" aria-label='{{ i18n "blogView" }}'><button type="button" aria-pressed="true" data-view="list">{{ i18n "list" }}</button><button type="button" aria-pressed="false" data-view="graph">{{ i18n "graph" }}</button></div>
+    </div>
+    <p class="meta" data-count aria-live="polite">{{ len .RegularPages }} {{ i18n "posts" }}</p>
+    <div data-list>
+      {{ range .RegularPages }}
+        {{ $tags := slice }}{{ range .GetTerms "tags" }}{{ $tags = $tags | append .LinkTitle }}{{ end }}
+        {{ $references := slice }}
+        {{ range findRESubmatch `<a\b[^>]*\bhref="([^"]+)"` .Content }}
+          {{ $references = $references | append (index . 1 | htmlUnescape) }}
+        {{ end }}
+        <article class="registry-row" data-item data-category="{{ $tags | jsonify }}" data-references="{{ $references | jsonify }}">
+          <div>
+            <p class="meta">{{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "02 Jan 2006" }}</time>{{ end }}</p>
+            <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+            {{ with .Description | default (.Summary | plainify | truncate 180) }}<p>{{ . }}</p>{{ end }}
+            {{ with .GetTerms "tags" }}<div class="tags">{{ range . }}<a class="tag" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</div>{{ end }}
+          </div>
+          <span class="meta">{{ .ReadingTime }} {{ i18n "readTime" }}</span>
+        </article>
+      {{ else }}
+        <div class="panel"><h2>{{ i18n "firstPostPending" }}</h2><p>{{ i18n "postFeed" }}</p></div>
+      {{ end }}
+    </div>
+    <div data-graph hidden></div>
+    <p data-empty hidden>{{ i18n "noPosts" }}</p>
+    {{ with .OutputFormats.Get "rss" }}<p><a href="{{ .RelPermalink }}">{{ i18n "rss" }}</a></p>{{ end }}
+    <p><a href="{{ site.Params.garden }}">{{ i18n "garden" }}</a></p>
+  </section>
+{{ end }}
