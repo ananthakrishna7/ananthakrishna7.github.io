@@ -50,12 +50,12 @@ enableGitInfo = false
 
 [languages.ja]
   locale = "ja"
-  title = "アナンタクリスナン・バラジ"
+  title = "アナンタクリシュナン・バラジ"
   label = "日本語"
   weight = 2
 
 [languages.ja.params]
-  description = "アナンタクリスナン・バラジのポートフォリオ。ソフトウェア開発、技術記事、創作活動を紹介します。"
+  description = "アナンタクリシュナン・バラジのポートフォリオ。ソフトウェア開発、技術記事、創作活動を紹介します。"
 
 [[languages.ja.menus.main]]
   name = "ホーム"
