@@ -6,7 +6,7 @@
         {{ $portrait := .Fill "448x448 Center webp q82" }}
         <img src="{{ $portrait.RelPermalink }}" width="{{ $portrait.Width }}" height="{{ $portrait.Height }}" alt="{{ i18n "portrait" }} {{ site.Title }}">
       {{ end }}
-      <p class="eyebrow">Ananthakrishnan Balajee</p>
+      <p class="eyebrow">{{ site.Title }}</p>
       <a href="mailto:{{ site.Params.email }}">{{ i18n "email" }}</a>
       <a href="{{ site.Params.linkedin }}">LinkedIn</a>
       <a href="{{ site.Params.github }}">GitHub</a>

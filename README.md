@@ -37,3 +37,5 @@ A matching basename pairs the pages so the language switch opens the counterpart
 Create a Japanese draft with `hugo new content blog/origami.ja.md` and change its title, summary, and body. Preview drafts with `hugo server -D`; publish by removing `draft: true`. The blog graph uses links in the Markdown.
 
 IBM Plex is distributed under the SIL Open Font License. See `static/fonts/OFL.txt`.
+
+The footer uses [IBM Carbon icons](https://github.com/carbon-design-system/carbon/tree/bec2dad9deecded6c3e397c799571e3e57bc9bc2/packages/icons/src/svg/32) under the Apache License 2.0. See `static/icons/carbon/LICENSE`.

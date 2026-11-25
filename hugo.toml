@@ -50,11 +50,12 @@ enableGitInfo = false
 
 [languages.ja]
   locale = "ja"
+  title = "アナンタクリスナン・バラジ"
   label = "日本語"
   weight = 2
 
 [languages.ja.params]
-  description = "Ananthakrishnan Balajeeのポートフォリオ。ソフトウェア開発、技術記事、創作活動を紹介します。"
+  description = "アナンタクリスナン・バラジのポートフォリオ。ソフトウェア開発、技術記事、創作活動を紹介します。"
 
 [[languages.ja.menus.main]]
   name = "ホーム"

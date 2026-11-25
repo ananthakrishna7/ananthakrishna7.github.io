@@ -134,8 +134,19 @@ button { cursor: pointer; }
 .footer { margin-top: auto; background: var(--shell-background); border-top: 1px solid var(--border-subtle); }
 .footer-inner { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; padding-block: 2rem; }
 .footer-inner p { color: var(--text-muted); font-size: .9rem; margin-top: .3rem; }
-.footer nav { display: flex; flex-wrap: wrap; gap: .75rem 1.5rem; }
-.footer nav a { color: var(--text-secondary); }
+.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: .25rem; }
+.footer-links a { color: var(--text-secondary); }
+.footer-links .footer-icon-link { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; }
+.footer-icon-link:hover { background: var(--layer-hover); color: var(--link); }
+.footer-icon { width: 1.5rem; height: 1.5rem; background: currentColor; mask: var(--icon) center / contain no-repeat; }
+.footer-icon-github { --icon: url("../icons/carbon/logo--github.svg"); }
+.footer-icon-linkedin { --icon: url("../icons/carbon/logo--linkedin.svg"); }
+.footer-icon-instagram { --icon: url("../icons/carbon/logo--instagram.svg"); }
+.footer-icon-email { --icon: url("../icons/carbon/email.svg"); }
+.footer-links a:not(.footer-icon-link) { margin-inline-start: .5rem; }
+@media (forced-colors: active) {
+  .footer-icon { forced-color-adjust: none; color: LinkText; }
+}
 .page-hero { background: var(--page-background); border-bottom: 1px solid var(--page-border); }
 .page-hero-inner { min-height: clamp(16rem, 29vw, 25rem); padding-block: 3rem; display: flex; flex-direction: column; justify-content: flex-end; gap: .75rem; }
 .page-hero h1 { font-size: clamp(2.6rem, 6vw, 5rem); max-width: 18ch; }

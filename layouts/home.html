@@ -7,7 +7,9 @@
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">{{ i18n "developer" }} <span>/</span> {{ i18n "learner" }} <span>/</span> {{ i18n "artist" }}</p>
-      <h1>Ananthakrishnan<br><em>Balajee</em></h1>
+      {{ $separator := cond (eq site.Language.Name "ja") "・" " " }}
+      {{ $name := split site.Title $separator }}
+      <h1 aria-label="{{ site.Title }}">{{ if eq (len $name) 2 }}{{ index $name 0 }}<br><em>{{ index $name 1 }}</em>{{ else }}{{ site.Title }}{{ end }}</h1>
       <p class="dek">{{ .Description }}</p>
       <div class="actions"><a class="button primary" href="{{ $projects.RelPermalink }}">{{ i18n "exploreProjects" }}</a><a class="button" href="{{ $resume.RelPermalink }}">{{ i18n "viewResume" }}</a></div>
     </div>

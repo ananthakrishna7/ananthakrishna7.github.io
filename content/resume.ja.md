@@ -1,7 +1,7 @@
 ---
 title: "プロフィール・経歴"
 label: "自己紹介"
-description: "Ananthakrishnan Balajee · ソフトウェア開発者"
+description: "アナンタクリスナン・バラジ · ソフトウェア開発者"
 layout: "resume"
 ---
 
