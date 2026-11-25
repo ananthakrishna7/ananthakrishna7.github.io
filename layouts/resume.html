@@ -8,8 +8,8 @@
       {{ end }}
       <p class="eyebrow">{{ site.Title }}</p>
       <a href="mailto:{{ site.Params.email }}">{{ i18n "email" }}</a>
-      <a href="{{ site.Params.linkedin }}">LinkedIn</a>
-      <a href="{{ site.Params.github }}">GitHub</a>
+      <a href="{{ site.Params.linkedin }}">{{ i18n "linkedin" }}</a>
+      <a href="{{ site.Params.github }}">{{ i18n "github" }}</a>
       <button type="button" class="button" data-print hidden>{{ i18n "print" }}</button>
     </aside>
     <article class="prose">{{ .Content }}</article>
