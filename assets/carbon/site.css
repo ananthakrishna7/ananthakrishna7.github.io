@@ -101,10 +101,9 @@ button { cursor: pointer; }
 .shell-contact { border-inline: 1px solid var(--border-subtle); margin-inline-start: .75rem; }
 .hero { overflow: hidden; border-bottom: 1px solid var(--border-subtle); background: var(--hero-background); }
 .hero-grid { display: grid; grid-template-columns: minmax(0,1.03fr) minmax(0,1fr); align-items: stretch; }
-.hero-copy { padding-block: clamp(3.5rem, 8vw, 8rem); position: relative; z-index: 1; }
-.hero h1 { margin: 1.2rem 0 1.45rem; font-size: clamp(2.65rem, 5.5vw, 6.1rem); letter-spacing: -.055em; line-height: .99; }
+.hero-copy { container-type: inline-size; padding-block: clamp(3.5rem, 8vw, 8rem); position: relative; z-index: 1; }
+.hero h1 { margin: 1.2rem 0 1.45rem; --heading-size: clamp(2.65rem, 5.5vw, 6.1rem); font-size: min(var(--heading-size), 14cqi); letter-spacing: -.055em; line-height: .99; }
 .hero h1 em { font-style: normal; color: var(--link); }
-:lang(ja) .hero-copy { container-type: inline-size; }
 :lang(ja) .hero h1 { font-size: min(9.7cqi, 6.1rem); letter-spacing: -.035em; }
 .eyebrow, .meta, .visual-foot { font: .82rem/1.6 var(--mono); color: var(--text-muted); }
 .eyebrow { letter-spacing: .075em; text-transform: uppercase; }
@@ -200,14 +199,14 @@ button { cursor: pointer; }
   .shell-contact { margin-left: auto; }
   .shell nav { order: 1; margin: 0; width: 100%; border-top: 1px solid var(--border-subtle); overflow-x: auto; }
   .shell nav a { padding-inline: .7rem; }
-  .hero h1 { font-size: clamp(2.65rem, 6vw, 4rem); }
+  .hero h1 { --heading-size: clamp(2.65rem, 6vw, 4rem); }
   .hero-grid { grid-template-columns: minmax(0, 1fr) minmax(0, .85fr); }
   .article-grid { grid-template-columns: minmax(0, 12rem) minmax(0, 1fr); }
 }
 @media (max-width: 42rem) {
   .hero-grid, .article-grid, .dashboard, .creative-grid, .creative-feature { grid-template-columns: minmax(0, 1fr); }
   .hero-copy { padding-block: 3.5rem 2.5rem; }
-  .hero h1 { font-size: clamp(2.65rem, 9vw, 4.3rem); }
+  .hero h1 { --heading-size: clamp(2.65rem, 9vw, 4.3rem); }
   .hero-visual { min-height: 16rem; }
   .contact-inner { align-items: flex-start; flex-direction: column; }
   .toolbar, .blog-toolbar, .registry-row { grid-template-columns: minmax(0, 1fr); }
