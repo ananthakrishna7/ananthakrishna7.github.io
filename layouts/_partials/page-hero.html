@@ -1,7 +1,7 @@
 <header class="page-hero">
   <div class="wrap page-hero-inner">
     {{ $label := .Params.label }}
-    {{ if and (not $label) .IsPage (eq .Section "blog") }}{{ $label = i18n "technicalLog" }}{{ end }}
+    {{ if and (not $label) .IsPage (eq .Section "blog") }}{{ $label = i18n "blogTitle" }}{{ end }}
     {{ with $label }}<p class="eyebrow">{{ . }}{{ with $.Params.japanese }} <span class="japanese" lang="ja">{{ . }}</span>{{ end }}</p>{{ end }}
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="dek">{{ . }}</p>{{ end }}

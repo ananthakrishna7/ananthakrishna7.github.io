@@ -39,7 +39,7 @@ enableGitInfo = false
   weight = 40
 
 [[languages.en.menus.main]]
-  name = "Creative"
+  name = "Hobbies"
   pageRef = "/creative"
   weight = 50
 
@@ -77,6 +77,6 @@ enableGitInfo = false
   weight = 40
 
 [[languages.ja.menus.main]]
-  name = "創作"
+  name = "趣味"
   pageRef = "/creative"
   weight = 50

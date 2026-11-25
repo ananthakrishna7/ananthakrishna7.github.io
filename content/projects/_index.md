@@ -1,6 +1,4 @@
 ---
-title: "Project registry"
-label: "Projects"
-japanese: "開発"
+title: "Projects"
 description: "Browse my public GitHub repositories by name or language."
 ---

@@ -12,37 +12,38 @@
       <div class="actions"><a class="button primary" href="{{ $projects.RelPermalink }}">{{ i18n "exploreProjects" }}</a><a class="button" href="{{ $resume.RelPermalink }}">{{ i18n "viewResume" }}</a></div>
     </div>
     <div class="hero-visual" aria-hidden="true">
-      <div class="visual-caption"><span class="signal"></span> SYSTEM_INIT <span class="japanese" lang="ja">創作と開発</span></div>
       <canvas data-field="orb" width="800" height="650"></canvas>
       <div class="visual-foot"><span>+</span><span>+</span></div>
     </div>
   </div>
 </section>
-<section class="wrap band" aria-labelledby="command-title">
+<section class="wrap band" aria-labelledby="work-title">
   <div class="section-heading">
-    <div><p class="eyebrow">{{ i18n "workAndWriting" }}<span class="japanese" lang="ja">活動</span></p><h2 id="command-title">{{ i18n "commandCenter" }}</h2></div>
+    <h2 id="work-title">{{ i18n "homepageWork" }}</h2>
   </div>
   <div class="dashboard">
     <section class="panel">
-      <p class="eyebrow">{{ i18n "githubPulse" }}</p>
-      {{ range first 3 hugo.Data.projects }}<a class="repo-preview" href="{{ .url }}"><strong>{{ .name }}</strong>{{ with .language }}<span class="meta">{{ . }}</span>{{ end }}</a>{{ end }}
+      <h3>{{ i18n "projectsOnGitHub" }}</h3>
+      {{ range where hugo.Data.projects "name" "ragnarok" }}
+        <h4><a href="{{ .url }}">Ragnarok</a></h4>
+        <p>{{ i18n "ragnarokDescription" }}</p>
+      {{ end }}
       <a class="panel-action" href="{{ $projects.RelPermalink }}">{{ i18n "allProjects" }}</a>
     </section>
     <section class="panel">
-      <p class="eyebrow">{{ i18n "technicalLog" }}</p>
+      <h3>{{ i18n "blogTitle" }}</h3>
       {{ with index $blog.RegularPages 0 }}
-        <h3><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h3>
+        <h4><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h4>
         <p>{{ .Description | default (.Summary | plainify | truncate 100) }}</p>
       {{ else }}
-        <h3>{{ i18n "notesFromBuilding" }}</h3><p>{{ i18n "firstPost" }}</p>
+        <p>{{ i18n "firstPostPending" }}</p>
       {{ end }}
       <a class="panel-action" href="{{ $blog.RelPermalink }}">{{ i18n "visitBlog" }}</a>
     </section>
-    <section class="panel panel-terminal">
-      <p class="eyebrow">{{ i18n "creative" }}</p>
-      <h3>{{ i18n "beyondKeyboard" }}</h3>
-      <p class="terminal-line">{{ i18n "hobbies" }}</p>
-      <a class="panel-action" href="{{ $creative.RelPermalink }}">{{ i18n "exploreCreative" }}</a>
+    <section class="panel panel-accent">
+      <h3>{{ i18n "hobbiesTitle" }}</h3>
+      <p>{{ i18n "hobbies" }}</p>
+      <a class="panel-action" href="{{ $creative.RelPermalink }}">{{ i18n "viewHobbies" }}</a>
     </section>
     {{ with hugo.Data.thoughts }}
       <section class="panel" data-thoughts>

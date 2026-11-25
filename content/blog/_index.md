@@ -1,6 +1,4 @@
 ---
-title: "Technical log"
-label: "Blog"
-japanese: "記事"
+title: "Blog"
 description: "Notes on software, tools, and what I learn while building."
 ---
