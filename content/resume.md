@@ -1,7 +1,6 @@
 ---
 title: "Profile & résumé"
 label: "Profile"
-japanese: "自己紹介"
 description: "Ananthakrishnan Balajee · Software developer"
 layout: "resume"
 aliases: ["/cv/", "/profile/"]

@@ -106,8 +106,7 @@ button { cursor: pointer; }
 .hero h1 em { font-style: normal; color: var(--link); }
 .eyebrow, .meta, .visual-foot { font: .82rem/1.6 var(--mono); color: var(--text-muted); }
 .eyebrow { letter-spacing: .075em; text-transform: uppercase; }
-.eyebrow > span:not(.japanese) { color: var(--link); }
-.japanese { display: inline-block; margin-inline-start: .65em; color: var(--cyan); letter-spacing: .13em; }
+.eyebrow > span { color: var(--link); }
 .dek { max-width: 36rem; color: var(--text-secondary); font-size: clamp(1rem, 1.5vw, 1.3rem); }
 .actions { display: flex; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
 .button { display: inline-flex; align-items: center; justify-content: center; min-height: 3rem; min-width: 8rem; padding: .65rem 1rem; border: 1px solid var(--border-strong); background: transparent; font-size: .9rem; color: var(--text); text-decoration: none; }
