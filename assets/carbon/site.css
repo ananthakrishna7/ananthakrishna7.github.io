@@ -28,8 +28,6 @@
   --mono: "IBM Plex Mono", ui-monospace, monospace;
   --shell-background: #111;
   --hero-background: #111114;
-  --monogram-background: #132242;
-  --monogram-border: #374f7b;
   --panel-accent: #1c1d2c;
   --contact-background: #20202b;
   --page-background: #20232e;
@@ -60,8 +58,6 @@
   --cyan: #00539a;
   --shell-background: #fff;
   --hero-background: #f4f4f4;
-  --monogram-background: #edf5ff;
-  --monogram-border: #a6c8ff;
   --panel-accent: #edf5ff;
   --contact-background: #e8f1ff;
   --page-background: #edf5ff;
@@ -98,7 +94,6 @@ button { cursor: pointer; }
 .shell { background: var(--shell-background); border-bottom: 1px solid var(--border-subtle); }
 .shell-inner { display: flex; align-items: stretch; min-height: 3.5rem; }
 .brand { display: inline-flex; align-items: center; gap: .75rem; color: var(--text); font-weight: 600; text-decoration: none; }
-.monogram { display: grid; place-items: center; width: 2rem; height: 2rem; color: var(--cyan); background: var(--monogram-background); border: 1px solid var(--monogram-border); font: .8rem var(--mono); }
 .shell nav { display: flex; margin-inline-start: auto; }
 .shell nav a, .shell-contact { display: grid; place-items: center; border-block-end: 2px solid transparent; padding: .65rem 1rem; font-size: .9rem; color: var(--text-secondary); text-decoration: none; white-space: nowrap; }
 .shell nav a[aria-current] { color: var(--text); border-block-end-color: var(--interactive); }
@@ -227,10 +222,11 @@ button { cursor: pointer; }
 @media (max-width: 56rem) { .shell-utilities { margin-left: auto; } }
 @media (max-width: 30rem) { .shell .brand { font-size: .84rem; gap: .4rem; } .shell-contact { display: none; } }
 
-.theme-toggle { padding-inline: .65rem; color: var(--text-secondary); background: transparent; border: 0; font-size: .85rem; white-space: nowrap; min-height: 2.75rem; }
-.theme-toggle[aria-pressed="true"] { color: var(--link); box-shadow: inset 0 -2px var(--interactive); }
+.theme-toggle { display: grid; place-items: center; width: 2.75rem; min-height: 2.75rem; padding: 0; color: var(--text-secondary); background: transparent; border: 0; }
+.theme-toggle svg { width: 1.25rem; height: 1.25rem; }
+.theme-toggle .theme-moon, [data-theme="light"] .theme-toggle .theme-sun { display: none; }
+[data-theme="light"] .theme-toggle .theme-moon { display: block; }
 .theme-toggle:hover { background: var(--layer-hover); color: var(--text); }
 @media (max-width: 30rem) {
-  .theme-toggle { padding-inline: .4rem; }
   .language-switch { padding-inline: .4rem; }
 }

@@ -2,13 +2,18 @@ const themeButton = document.querySelector('[data-theme-toggle]');
 if (themeButton) {
   const root = document.documentElement;
   const isLight = () => root.dataset.theme === 'light';
-  themeButton.setAttribute('aria-pressed', String(isLight()));
+  function updateThemeLabel() {
+    const label = isLight() ? themeButton.dataset.labelDark : themeButton.dataset.labelLight;
+    themeButton.setAttribute('aria-label', label);
+    themeButton.title = label;
+  }
+  updateThemeLabel();
   themeButton.hidden = false;
 
   themeButton.addEventListener('click', () => {
     const theme = isLight() ? 'dark' : 'light';
     root.dataset.theme = theme;
-    themeButton.setAttribute('aria-pressed', String(theme === 'light'));
+    updateThemeLabel();
     try {
       localStorage.setItem('portfolio-theme', theme);
     } catch {
