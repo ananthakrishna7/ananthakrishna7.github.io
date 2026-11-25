@@ -7,9 +7,11 @@
         <img src="{{ $portrait.RelPermalink }}" width="{{ $portrait.Width }}" height="{{ $portrait.Height }}" alt="{{ i18n "portrait" }} {{ site.Title }}">
       {{ end }}
       <p class="eyebrow">{{ site.Title }}</p>
-      <a href="mailto:{{ site.Params.email }}">{{ i18n "email" }}</a>
-      <a href="{{ site.Params.linkedin }}">{{ i18n "linkedin" }}</a>
-      <a href="{{ site.Params.github }}">{{ i18n "github" }}</a>
+      <nav class="contact-links" aria-label="{{ i18n "contact" }}">
+        {{ partial "contact-icon.html" (dict "href" (printf "mailto:%s" site.Params.email) "label" (i18n "email") "icon" "email") }}
+        {{ partial "contact-icon.html" (dict "href" site.Params.linkedin "label" (i18n "linkedin") "icon" "linkedin") }}
+        {{ partial "contact-icon.html" (dict "href" site.Params.github "label" (i18n "github") "icon" "github") }}
+      </nav>
       <button type="button" class="button" data-print hidden>{{ i18n "print" }}</button>
     </aside>
     <article class="prose">{{ .Content }}</article>
