@@ -1,0 +1,13 @@
+{{ define "main" }}
+  {{ partial "page-hero.html" . }}
+  <div class="wrap article-grid band">
+    <aside class="article-aside">
+      <a href="{{ .CurrentSection.RelPermalink }}">{{ i18n "backToBlog" }}</a>
+      {{ if in .TableOfContents "<li>" }}<p class="eyebrow">{{ i18n "toc" }}</p>{{ .TableOfContents }}{{ end }}
+    </aside>
+    <article class="prose">
+      {{ .Content }}
+      {{ with .GetTerms "tags" }}<div class="tags">{{ range . }}<a class="tag" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}</div>{{ end }}
+    </article>
+  </div>
+{{ end }}

@@ -1,0 +1,12 @@
+<header class="page-hero">
+  <div class="wrap page-hero-inner">
+    {{ $label := .Params.label }}
+    {{ if and (not $label) .IsPage (eq .Section "blog") }}{{ $label = i18n "blogTitle" }}{{ end }}
+    {{ with $label }}<p class="eyebrow">{{ . }}</p>{{ end }}
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p class="dek">{{ . }}</p>{{ end }}
+    {{ if eq .Section "blog" }}{{ if .IsPage }}
+      <p class="meta">{{ with .Date }}{{ if not .IsZero }}<time datetime="{{ .Format "2006-01-02" }}">{{ .Format (i18n "dateFormat") }}</time><span aria-hidden="true"> / </span>{{ end }}{{ end }}{{ .ReadingTime }} {{ i18n "readTime" }}</p>
+    {{ end }}{{ end }}
+  </div>
+</header>

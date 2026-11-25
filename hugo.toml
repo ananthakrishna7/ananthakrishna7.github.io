@@ -1,3 +1,83 @@
-baseURL = 'https://example.org/'
-locale = 'en-us'
-title = 'My New Hugo Project'
+baseURL = "https://ananthakrishna7.github.io/"
+defaultContentLanguage = "en"
+hasCJKLanguage = true
+title = "Ananthakrishnan Balajee"
+publishDir = ".pages"
+enableRobotsTXT = true
+enableGitInfo = false
+
+[params]
+  description = "Software projects, technical writing, and creative experiments by Ananthakrishnan Balajee."
+  github = "https://github.com/ananthakrishna7"
+  linkedin = "https://www.linkedin.com/in/ananthakrishnan-balajee"
+  garden = "https://ananthakrishna7.github.io/digital-garden/"
+  instagram = "https://www.instagram.com/ananthakrishnanbalajee"
+  email = "ananthakrishnanbalajee@gmail.com"
+  # Add a public Spotify track, album, or playlist URL and label together.
+  spotify = ""
+  spotifyLabel = ""
+  donations = ""
+
+[[languages.en.menus.main]]
+  name = "Home"
+  pageRef = "/"
+  weight = 10
+
+[[languages.en.menus.main]]
+  name = "Blog"
+  pageRef = "/blog"
+  weight = 20
+
+[[languages.en.menus.main]]
+  name = "Projects"
+  pageRef = "/projects"
+  weight = 30
+
+[[languages.en.menus.main]]
+  name = "Résumé"
+  pageRef = "/resume"
+  weight = 40
+
+[[languages.en.menus.main]]
+  name = "Hobbies"
+  pageRef = "/creative"
+  weight = 50
+
+[languages.en]
+  locale = "en"
+  label = "English"
+  weight = 1
+
+[languages.ja]
+  locale = "ja"
+  title = "アナンタクリシュナン・バラジ"
+  label = "日本語"
+  weight = 2
+
+[languages.ja.params]
+  description = "アナンタクリシュナン・バラジのポートフォリオ。ソフトウェア開発、技術記事、創作活動を紹介します。"
+
+[[languages.ja.menus.main]]
+  name = "ホーム"
+  pageRef = "/"
+  weight = 10
+
+[[languages.ja.menus.main]]
+  name = "ブログ"
+  pageRef = "/blog"
+  weight = 20
+
+[[languages.ja.menus.main]]
+  name = "プロジェクト"
+  pageRef = "/projects"
+  weight = 30
+
+[[languages.ja.menus.main]]
+  name = "経歴"
+  pageRef = "/resume"
+  weight = 40
+
+[[languages.ja.menus.main]]
+  name = "趣味"
+  pageRef = "/creative"
+  weight = 50

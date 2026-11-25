@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="{{ site.Language.Locale | default "en" }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{ .Description | default site.Params.description }}">
+  {{ range .AllTranslations }}<link rel="alternate" hreflang="{{ .Language.Locale }}" href="{{ .Permalink }}">{{ end }}
+  <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Title }}" href="{{ .RelPermalink }}">{{ end }}
+  <script>
+    try {
+      if (localStorage.getItem('portfolio-theme') === 'light') document.documentElement.dataset.theme = 'light';
+    } catch {}
+  </script>
+  {{ $css := resources.Get "carbon/site.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+  {{ $js := resources.Get "carbon/site.js" | minify | fingerprint }}
+  <script src="{{ $js.RelPermalink }}" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">{{ i18n "skip" }}</a>
+  <header class="shell">
+    <div class="wrap shell-inner">
+      <a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a>
+      <nav aria-label='{{ i18n "nav" }}'>
+        {{ range site.Menus.main }}
+          {{ $active := or ($.IsMenuCurrent .Menu .) ($.HasMenuCurrent .Menu .) (and .Page (eq $.Section .Page.Section) (ne $.Section "")) }}
+          <a href="{{ .URL }}"{{ if $active }} aria-current="{{ if $.IsMenuCurrent .Menu . }}page{{ else }}true{{ end }}"{{ end }}>{{ .Name }}</a>
+        {{ end }}
+      </nav>
+      <div class="shell-utilities">
+        {{ $current := . }}
+        {{ range hugo.Sites }}
+          {{ if ne .Language.Name $current.Language.Name }}
+            {{ $destination := .Home }}
+            {{ if $current.Section }}
+              {{ with .GetPage (printf "/%s" $current.Section) }}{{ $destination = . }}{{ end }}
+            {{ end }}
+            {{ $locale := .Language.Locale }}
+            {{ range $current.Translations }}{{ if eq .Language.Locale $locale }}{{ $destination = . }}{{ end }}{{ end }}
+            <a class="language-switch" href="{{ $destination.RelPermalink }}" lang="{{ $locale }}" hreflang="{{ $locale }}">{{ if eq $locale "ja" }}日本語{{ else }}English{{ end }}</a>
+          {{ end }}
+        {{ end }}
+        <button class="theme-toggle" type="button" data-theme-toggle
+          data-label-light="{{ i18n "switchToLight" }}" data-label-dark="{{ i18n "switchToDark" }}"
+          aria-label="{{ i18n "switchToLight" }}" hidden>
+          <svg class="theme-sun" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2m0 16v2M2 12h2m16 0h2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42m0-14.14-1.42 1.42m-11.3 11.3-1.42 1.42"/>
+          </svg>
+          <svg class="theme-moon" aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round">
+            <path d="M21 13.4A9.2 9.2 0 0 1 10.6 3 9.2 9.2 0 1 0 21 13.4Z"/>
+          </svg>
+        </button>
+        <a class="shell-contact" href="mailto:{{ site.Params.email }}">{{ i18n "contact" }}</a>
+      </div>
+    </div>
+  </header>
+  <main id="main" tabindex="-1">{{ block "main" . }}{{ end }}</main>
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div><a class="brand" href="{{ site.Home.RelPermalink }}">{{ site.Title }}</a><p>{{ i18n "footer" }}</p></div>
+      <nav class="contact-links" aria-label='{{ i18n "elsewhere" }}'>
+        {{ partial "contact-icon.html" (dict "href" site.Params.github "label" (i18n "github") "icon" "github") }}
+        {{ partial "contact-icon.html" (dict "href" site.Params.linkedin "label" (i18n "linkedin") "icon" "linkedin") }}
+        {{ partial "contact-icon.html" (dict "href" site.Params.instagram "label" "Instagram" "icon" "instagram") }}
+        {{ partial "contact-icon.html" (dict "href" (printf "mailto:%s" site.Params.email) "label" (i18n "email") "icon" "email") }}
+        {{ with site.Params.donations }}<a href="{{ . }}">{{ i18n "donate" }}</a>{{ end }}
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
