@@ -183,7 +183,8 @@ button { cursor: pointer; }
 .article-aside .eyebrow { margin-top: 1rem; }
 .article-aside ul { padding-left: 1.1rem; }
 .profile-card { display: grid; gap: .65rem; background: var(--layer); padding: 1rem; }
-.profile-card .eyebrow { margin-top: .3rem; }
+.profile-card img { justify-self: center; }
+.profile-card .eyebrow { margin-top: .3rem; text-align: center; }
 .profile-card .contact-links { justify-content: center; }
 .profile-card button { margin-top: .4rem; }
 .creative-grid { background: transparent; border: 0; gap: 1rem; }
