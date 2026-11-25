@@ -1,3 +1,22 @@
+const themeButton = document.querySelector('[data-theme-toggle]');
+if (themeButton) {
+  const root = document.documentElement;
+  const isLight = () => root.dataset.theme === 'light';
+  themeButton.setAttribute('aria-pressed', String(isLight()));
+  themeButton.hidden = false;
+
+  themeButton.addEventListener('click', () => {
+    const theme = isLight() ? 'dark' : 'light';
+    root.dataset.theme = theme;
+    themeButton.setAttribute('aria-pressed', String(theme === 'light'));
+    try {
+      localStorage.setItem('portfolio-theme', theme);
+    } catch {
+      // The current page still switches when storage is unavailable.
+    }
+  });
+}
+
 const japanese = document.documentElement.lang === 'ja';
 const copy = japanese ? {
   count: (n, blog) => blog ? `${n} 件の記事` : `${n} 件のリポジトリ`,

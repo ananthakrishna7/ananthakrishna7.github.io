@@ -8,6 +8,11 @@
   <title>{{ if not .IsHome }}{{ .Title }} · {{ end }}{{ site.Title }}</title>
   <link rel="canonical" href="{{ .Permalink }}">
   {{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ $.Title }}" href="{{ .RelPermalink }}">{{ end }}
+  <script>
+    try {
+      if (localStorage.getItem('portfolio-theme') === 'light') document.documentElement.dataset.theme = 'light';
+    } catch {}
+  </script>
   {{ $css := resources.Get "carbon/site.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}">
   {{ $js := resources.Get "carbon/site.js" | minify | fingerprint }}
@@ -29,11 +34,15 @@
         {{ range hugo.Sites }}
           {{ if ne .Language.Name $current.Language.Name }}
             {{ $destination := .Home }}
+            {{ if $current.Section }}
+              {{ with .GetPage (printf "/%s" $current.Section) }}{{ $destination = . }}{{ end }}
+            {{ end }}
             {{ $locale := .Language.Locale }}
             {{ range $current.Translations }}{{ if eq .Language.Locale $locale }}{{ $destination = . }}{{ end }}{{ end }}
             <a class="language-switch" href="{{ $destination.RelPermalink }}" lang="{{ $locale }}" hreflang="{{ $locale }}">{{ if eq $locale "ja" }}日本語{{ else }}English{{ end }}</a>
           {{ end }}
         {{ end }}
+        <button class="theme-toggle" type="button" data-theme-toggle aria-pressed="false" hidden>{{ i18n "lightMode" }}</button>
         <a class="shell-contact" href="mailto:{{ site.Params.email }}">{{ i18n "contact" }}</a>
       </div>
     </div>
